@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-success {
+    @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+  
+  .card-header {
+    @apply border-b border-gray-200 pb-4 mb-4;
+  }
+
+  /* Code styles */
+  .code-block {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto font-mono text-sm;
+  }
+  
+  .inline-code {
+    @apply bg-gray-100 text-gray-800 px-2 py-1 rounded font-mono text-sm;
+  }
+
+  /* Progress indicators */
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-2;
+  }
+  
+  .progress-fill {
+    @apply bg-blue-600 h-2 rounded-full transition-all duration-300;
+  }
+
+  /* Tutorial specific styles */
+  .tutorial-step {
+    @apply border border-gray-200 rounded-lg p-4 transition-all duration-200 hover:border-gray-300;
+  }
+  
+  .tutorial-step.active {
+    @apply border-blue-500 bg-blue-50;
+  }
+  
+  .tutorial-step.completed {
+    @apply border-green-500 bg-green-50;
+  }
+
+  /* Monaco Editor container */
+  .monaco-container {
+    @apply border border-gray-300 rounded-lg overflow-hidden;
+  }
+
+  /* Syntax highlighting for markdown code blocks */
+  .prose pre {
+    @apply bg-gray-900 text-gray-100;
+  }
+  
+  .prose code {
+    @apply bg-gray-100 text-gray-800 px-1 py-0.5 rounded text-sm;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s infinite;
+  }
+
+  /* Text gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Monaco Editor theme customization */
+.monaco-editor {
+  --vscode-editor-background: #1e293b !important;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tooltip styles */
+.tooltip {
+  @apply absolute z-10 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 invisible transition-opacity duration-300;
+}
+
+.tooltip.show {
+  @apply opacity-100 visible;
+}
+
+/* Notification styles */
+.notification {
+  @apply fixed top-4 right-4 z-50 max-w-sm p-4 rounded-lg shadow-lg transform transition-all duration-300;
+}
+
+.notification.success {
+  @apply bg-green-500 text-white;
+}
+
+.notification.error {
+  @apply bg-red-500 text-white;
+}
+
+.notification.info {
+  @apply bg-blue-500 text-white;
+}
+
+.notification.warning {
+  @apply bg-yellow-500 text-black;
+}
