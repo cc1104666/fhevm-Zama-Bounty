@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  output: 'standalone', // Enable standalone output for Docker
+  compress: true,
   webpack: (config, { isServer }) => {
     // Handle monaco-editor
     if (!isServer) {

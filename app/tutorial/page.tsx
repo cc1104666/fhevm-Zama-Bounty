@@ -1,6 +1,5 @@
 import { TutorialProvider } from '@/components/tutorial/TutorialProvider';
 import { TutorialLayout } from '@/components/tutorial/TutorialLayout';
-import { TutorialPageClient } from '@/components/tutorial/TutorialPageClient';
 
 export const metadata = {
   title: 'Interactive FHEVM Tutorial - Hello FHEVM',
@@ -8,5 +7,9 @@ export const metadata = {
 };
 
 export default function TutorialPage() {
-  return <TutorialPageClient />;
+  return (
+    <TutorialProvider>
+      <TutorialLayout />
+    </TutorialProvider>
+  );
 }

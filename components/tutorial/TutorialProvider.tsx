@@ -1,6 +1,7 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 export interface TutorialStep {
   id: string;
@@ -2497,6 +2498,19 @@ export function TutorialProvider({ children }: { children: ReactNode }) {
   const [currentExample, setCurrentExample] = useState<TutorialExample | null>(TUTORIAL_EXAMPLES[0]);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [examples] = useState<TutorialExample[]>(TUTORIAL_EXAMPLES);
+  const searchParams = useSearchParams();
+
+  // Handle URL parameters to select tutorial
+  useEffect(() => {
+    const exampleParam = searchParams.get('example');
+    if (exampleParam) {
+      const targetExample = examples.find(ex => ex.id === exampleParam);
+      if (targetExample) {
+        setCurrentExample(targetExample);
+        setCurrentStepIndex(0); // Reset to first step
+      }
+    }
+  }, [searchParams, examples]);
 
   const nextStep = () => {
     if (currentExample && currentStepIndex < currentExample.steps.length - 1) {
