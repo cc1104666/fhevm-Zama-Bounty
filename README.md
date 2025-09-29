@@ -2,8 +2,7 @@
 
 Welcome to the most beginner-friendly **Hello FHEVM** tutorial! This interactive guide helps developers ship their first confidential application using Fully Homomorphic Encryption on Ethereum.
 
-> 🏆 **Zama Bounty Program Season 10 Submission**  
-> Create the most beginner-friendly "Hello FHEVM" tutorial with complete, reproducible dApp examples.
+Welcome to my deployment address experience: http://fhevm_zama_bounty.anni.work/
 
 ## 🎯 What You'll Learn
 
@@ -200,5 +199,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Built with ❤️ for the Zama Community**
 
 *This tutorial was created as part of the Zama Bounty Program Season 10 to help developers learn and adopt FHEVM technology.*
+
 
 
