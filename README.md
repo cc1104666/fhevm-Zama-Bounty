@@ -190,7 +190,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- **Live Tutorial**: [https://hello-fhevm-tutorial.vercel.app](https://hello-fhevm-tutorial.vercel.app)
+- **Live Tutorial**: [http://fhevm_zama_bounty.anni.work/](http://fhevm_zama_bounty.anni.work/)
 - **GitHub Repository**: [https://github.com/zama-ai/hello-fhevm-tutorial](https://github.com/zama-ai/hello-fhevm-tutorial)
 - **Zama Documentation**: [https://docs.zama.ai](https://docs.zama.ai)
 - **FHEVM Discord**: [https://discord.gg/zama](https://discord.gg/zama)
@@ -200,3 +200,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Built with ❤️ for the Zama Community**
 
 *This tutorial was created as part of the Zama Bounty Program Season 10 to help developers learn and adopt FHEVM technology.*
+
